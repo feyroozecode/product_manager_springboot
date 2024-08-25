@@ -1,0 +1,25 @@
+#spring.application.name=demo
+spring:
+  h2:
+    console:
+      enabled: true
+    datasource:
+      url: jdbc:h2:mem:testdb
+      driverClassName: org.h2.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: create-drop
+
+  server:
+    port: 8080
+    compression:
+      enabled: true
+    error:
+        include-stacktrace: always
+    shutdown:
+        enabled: true
+
+  logging:
+    file:
+        name: logs/demo.log
